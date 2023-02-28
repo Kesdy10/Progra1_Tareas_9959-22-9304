@@ -1,4 +1,4 @@
-//Fecha creeación: 6 feb 2023 - autor: daguilae
+//Fecha creeaciï¿½n: 6 feb 2023 - autor: daguilae
 //Este programa tienen como objetivo mostrar el uso de funciones a traves de una calculadora
 #include <iostream>
 #include <cstdlib>
@@ -6,7 +6,7 @@
 
 using namespace std;
 
-//Definición de prototipos
+//Definiciï¿½n de prototipos
 void menuPrincipal();
 void menuOperacionesBasicas();
 void menuOperacionesExtendidas();
@@ -24,7 +24,7 @@ int main() {
     menuPrincipal();
     return 0;
 }
-//Implementación de funciones
+//Implementaciï¿½n de funciones
 void menuOperacionesExtendidas()
 {
     int opciones;
@@ -40,7 +40,7 @@ void menuOperacionesExtendidas()
         cout << "\t4. Raiz de un numero" << endl;
         cout << "\t5. Raiz cubica de un numero" << endl;
         cout << "\t6. SALIR" << endl;
-        cout << "\n\tIngrese una opción: ";
+        cout << "\n\tIngrese una opciï¿½n: ";
         cin >> opciones;
         switch (opciones)
         {
@@ -74,12 +74,12 @@ void menuOperacionesBasicas()
         system("cls");
         cout << "\n\n\t\t\tMenu Operaciones Basicas" << endl;
         cout << "\t\t\t-----------------" << endl;
-        cout << "\t1. Sumar dos números" << endl;
-        cout << "\t2. Restar dos números" << endl;
-        cout << "\t3. Multiplicar dos números" << endl;
-        cout << "\t4. Dividir dos números" << endl;
+        cout << "\t1. Sumar dos nï¿½meros" << endl;
+        cout << "\t2. Restar dos nï¿½meros" << endl;
+        cout << "\t3. Multiplicar dos nï¿½meros" << endl;
+        cout << "\t4. Dividir dos nï¿½meros" << endl;
         cout << "\t5. SALIR" << endl;
-        cout << "\n\tIngrese una opción: ";
+        cout << "\n\tIngrese una opciï¿½n: ";
         cin >> opciones;
         switch (opciones)
         {
@@ -112,7 +112,7 @@ void menuPrincipal()
         cout << "\t1. Operaciones Basicas" << endl;
         cout << "\t2. Operaciones Extendidas" << endl;
         cout << "\t3. SALIR" << endl;
-        cout << "\n\tIngrese una opción: ";
+        cout << "\n\tIngrese una opciï¿½n: ";
         cin >> opciones;
         switch (opciones)
         {
@@ -135,7 +135,7 @@ void factorial()
     float resultadoFactorial;
     cout << "\n\tCalculo del Factorial" << endl;
     cout << "\t\t\t-----------------" << endl;
-    cout << "\n\tIngrese Número: ";
+    cout << "\n\tIngrese Nï¿½mero: ";
     cin >> numeroIngresado;
     resultadoFactorial = 1;
     for (i=1; i <= numeroIngresado; i++)
@@ -149,7 +149,7 @@ void numeroAlCuadrado()
 {
 int primerNumero;
 float resultadoCuadrado;
-    cout << "\n\tIngrese un Número: ";
+    cout << "\n\tIngrese un Nï¿½mero: ";
     cin >> primerNumero;
     cout << "\n\t----------------------" << endl;
     resultadoCuadrado = primerNumero * primerNumero;
@@ -160,7 +160,7 @@ void numeroAlCubo()
 {
 int primerNumero;
 float resultadoCubo;
-    cout << "\n\tIngrese un Número: ";
+    cout << "\n\tIngrese un Nï¿½mero: ";
     cin >> primerNumero;
     cout << "\n\t----------------------" << endl;
     resultadoCubo = primerNumero * primerNumero * primerNumero;
@@ -171,7 +171,7 @@ void raizCuadrada()
 {
 int primerNumero;
 float resultadoRaiz;
-    cout << "\n\tIngrese un Número: ";
+    cout << "\n\tIngrese un Nï¿½mero: ";
     cin >> primerNumero;
     cout << "\n\t----------------------" << endl;
     resultadoRaiz = sqrt(primerNumero);
@@ -182,7 +182,7 @@ void raizCubica()
 {
 int primerNumero;
 float resultadoRaiz;
-    cout << "\n\tIngrese un Número: ";
+    cout << "\n\tIngrese un Nï¿½mero: ";
     cin >> primerNumero;
     cout << "\n\t----------------------" << endl;
     resultadoRaiz = cbrt(primerNumero);
@@ -193,9 +193,9 @@ void sumar()
 {
     int primerNumero, segundoNumero;
     float resultadoSumar;
-    cout << "\n\tIngrese primer Número: ";
+    cout << "\n\tIngrese primer Nï¿½mero: ";
     cin >> primerNumero;
-    cout << "\n\tIngrese segundo Número: ";
+    cout << "\n\tIngrese segundo Nï¿½mero: ";
     cin >> segundoNumero;
     cout << "\n\t----------------------" << endl;
     resultadoSumar = primerNumero + segundoNumero;
@@ -206,9 +206,9 @@ void restar()
 {
     int primerNumero, segundoNumero;
     float resultadoRestar;
-    cout << "\n\tIngrese primer Número: ";
+    cout << "\n\tIngrese primer Nï¿½mero: ";
     cin >> primerNumero;
-    cout << "\n\tIngrese segundo Número: ";
+    cout << "\n\tIngrese segundo Nï¿½mero: ";
     cin >> segundoNumero;
     cout << "\n\t----------------------" << endl;
     resultadoRestar = primerNumero - segundoNumero;
@@ -219,9 +219,9 @@ void multiplicar()
 {
     int primerNumero, segundoNumero;
     float resultadoMultiplicar;
-    cout << "\n\tIngrese primer Número: ";
+    cout << "\n\tIngrese primer Nï¿½mero: ";
     cin >> primerNumero;
-    cout << "\n\tIngrese segundo Número: ";
+    cout << "\n\tIngrese segundo Nï¿½mero: ";
     cin >> segundoNumero;
     cout << "\n\t----------------------" << endl;
     resultadoMultiplicar = primerNumero * segundoNumero;
@@ -232,9 +232,9 @@ void dividir()
 {
     int primerNumero, segundoNumero;
     float resultadoDividir;
-    cout << "\n\tIngrese primer Número: ";
+    cout << "\n\tIngrese primer Nï¿½mero: ";
     cin >> primerNumero;
-    cout << "\n\tIngrese segundo Número: ";
+    cout << "\n\tIngrese segundo Nï¿½mero: ";
     cin >> segundoNumero;
     cout << "\n\t----------------------" << endl;
     if (segundoNumero == 0)
@@ -247,4 +247,3 @@ void dividir()
     }
     system("pause>nul");
 }
-
