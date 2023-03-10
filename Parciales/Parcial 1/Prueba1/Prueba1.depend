@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1678423294 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial 1\prueba1\main.cpp
+	<iostream>
+	"Practi.h"
+
+1678423294 c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial 1\prueba1\include\practi.h
+	"Practi.h"
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<iostream>
+	<iomanip>
+
+1678422376 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial 1\prueba1\src\practi.cpp
+	"Practi.h"
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<iostream>
+	<iomanip>
+

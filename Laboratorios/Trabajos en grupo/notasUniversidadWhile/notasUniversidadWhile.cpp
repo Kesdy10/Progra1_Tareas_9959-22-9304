@@ -8,9 +8,9 @@
 
 using namespace std;
 
-    const int NUMERO_INDUSTRIA = 5;
-    const int NUMERO_ALUMNOS2 = 5;
-    const int NUMERO_ALUMNOS3 = 5;
+    const int NUMERO_ALUMNOS1 = 10;
+    const int NUMERO_ALUMNOS2 = 10;
+    const int NUMERO_ALUMNOS3 = 10;
     const int NUMERO_MATERIAS = 4;
     const int MAX_ACTIVIDADES = 20;
     const int MAX_CALIFICACION_PP = 20;
@@ -18,30 +18,30 @@ using namespace std;
     const int MAX_CALIFICACION_F = 35;
     const int MIN_CALIFICACION = 0;
     const int MAXIMA_LONGITUD_CADENA = 100;
-    float totalpromedio1 = 0;
-    float totalpromedio2 =0 ;
-    float totalpromedio3 = 0;
+    float totalpromedio1=0;
+    float totalpromedio2=0;
+    float totalpromedio3=0;
     const char FACULTAD = 3;
 
 int busquedaAleatorios(int minimo, int maximo);
-void llenarMatriz1(float matriz[NUMERO_INDUSTRIA][NUMERO_MATERIAS + 1]);
+void llenarMatriz1(float matriz[NUMERO_ALUMNOS1][NUMERO_MATERIAS + 1]);
 void llenarMatriz2(float matriz[NUMERO_ALUMNOS2][NUMERO_MATERIAS + 1]);
 void llenarMatriz3(float matriz[NUMERO_ALUMNOS3][NUMERO_MATERIAS + 1]);
 void imprimirMatrizLinea();
-void imprimirMatriz1(float matriz1[NUMERO_INDUSTRIA][NUMERO_MATERIAS + 1], char alumnos[NUMERO_INDUSTRIA][MAXIMA_LONGITUD_CADENA]);
+void imprimirMatriz1(float matriz1[NUMERO_ALUMNOS1][NUMERO_MATERIAS + 1], char alumnos[NUMERO_ALUMNOS1][MAXIMA_LONGITUD_CADENA]);
 void imprimirMatriz2(float matriz2[NUMERO_ALUMNOS2][NUMERO_MATERIAS + 1], char alumnos[NUMERO_ALUMNOS2][MAXIMA_LONGITUD_CADENA]);
 void imprimirMatriz3(float matriz3[NUMERO_ALUMNOS3][NUMERO_MATERIAS + 1], char alumnos[NUMERO_ALUMNOS3][MAXIMA_LONGITUD_CADENA]);
 int main()
 {
     srand(getpid());
-    float matriz1[NUMERO_INDUSTRIA][NUMERO_MATERIAS + 1];
+    float matriz1[NUMERO_ALUMNOS1][NUMERO_MATERIAS + 1];
     float matriz2[NUMERO_ALUMNOS2][NUMERO_MATERIAS + 1];
     float matriz3[NUMERO_ALUMNOS3][NUMERO_MATERIAS + 1];
-    char INDUSTRIA[NUMERO_ALUMNOS1][MAXIMA_LONGITUD_CADENA] = {"EMPRESA 1","EMPRESA 2","EMPRESA 3","EMPRESA 4","EMPRESA 5"};
-    char alumnos2[NUMERO_ALUMNOS2][MAXIMA_LONGITUD_CADENA] =  {"EMPRESA 1","EMPRESA 2","EMPRESA 3","EMPRESA 4","EMPRESA 5"};
-    char alumnos3[NUMERO_ALUMNOS3][MAXIMA_LONGITUD_CADENA] =  {"EMPRESA 1","EMPRESA 2","EMPRESA 3","EMPRESA 4","EMPRESA 5"};
+    char alumnos1[NUMERO_ALUMNOS1][MAXIMA_LONGITUD_CADENA] = {"Luisa","Barry","Maria","Pedro","Juana","Chris","Mario","Celia","Bryan","Kevin"};
+    char alumnos2[NUMERO_ALUMNOS2][MAXIMA_LONGITUD_CADENA] = {"Pablo","Lucia","Sonia","Ethan","Paola","Jorge","Angel","Paula","Ruben","Matty"};
+    char alumnos3[NUMERO_ALUMNOS3][MAXIMA_LONGITUD_CADENA] = {"Tania","Marta","Steve","Bruno","Alexa","Diego","Luigi","Diana","Karol","Shrek"};
     llenarMatriz1(matriz1);
-    imprimirMatriz1(matriz1, INDUSTRIA);
+    imprimirMatriz1(matriz1, alumnos1);
     llenarMatriz2(matriz2);
     imprimirMatriz2(matriz2, alumnos2);
     llenarMatriz3(matriz3);
@@ -52,7 +52,7 @@ int busquedaAleatorios(int minimo, int maximo)
     return minimo + rand() / (RAND_MAX / (maximo - minimo + 1) + 1);
 }
 
-void llenarMatriz1(float matriz1[NUMERO_INDUSTRIA][NUMERO_MATERIAS + 1])
+void llenarMatriz1(float matriz1[NUMERO_ALUMNOS1][NUMERO_MATERIAS + 1])
 {
     int y, x;
     for (y = 0; y < NUMERO_ALUMNOS1; y++)
@@ -200,8 +200,8 @@ void imprimirMatriz1(float matriz1[NUMERO_ALUMNOS1][NUMERO_MATERIAS + 1], char a
         imprimirMatrizLinea();
     }
     float promedioDeClase1= totalpromedio1/NUMERO_ALUMNOS1;
-    cout << "Promedio mayor facultad 1: " << setw(10) << INDUSTRIAPromedioMayor << " Nota: " << setw(10) << promedioMayor << endl;
-    cout << "Promedio menor facultad 1: " << setw(10) << INDUSTRIAPromedioMenor << " Nota: " << setw(10) << promedioMenor << endl;
+    cout << "Promedio mayor facultad 1: " << setw(10) << alumno1PromedioMayor << " Nota: " << setw(10) << promedioMayor << endl;
+    cout << "Promedio menor facultad 1: " << setw(10) << alumno1PromedioMenor << " Nota: " << setw(10) << promedioMenor << endl;
     cout << "promedio total de la facultad de ingenieria es de: " << setw(9) << promedioDeClase1 << endl;
 
     cout << "" << endl;

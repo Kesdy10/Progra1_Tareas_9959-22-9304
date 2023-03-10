@@ -10,21 +10,85 @@ using namespace std;
 void menuPrincipal();
 void menuOperacionesBasicas();
 void menuOperacionesExtendidas();
+void restar();
+void multiplicar();
+void dividir();
 void factorial();
 void numeroAlCuadrado();
 void numeroAlCubo();
 void raizCuadrada();
 void raizCubica();
 void sumar();
-void restar();
-void multiplicar();
-void dividir();
 
 int main() {
     menuPrincipal();
     return 0;
 }
 //Implementaci�n de funciones
+
+void menuPrincipal()
+{
+    int opciones;
+    bool repetir = true;
+    do
+    {
+        system("cls");
+        cout << "\n\n\t\t\tMENU CALCULADORA" << endl;
+        cout << "\t\t\t-----------------" << endl;
+        cout << "\t1. Operaciones Basicas" << endl;
+        cout << "\t2. Operaciones Extendidas" << endl;
+        cout << "\t3. SALIR" << endl;
+        cout << "\n\tIngrese una opcion: ";
+        cin >> opciones;
+        switch (opciones)
+        {
+        case 1:
+                menuOperacionesBasicas();
+                break;
+        case 2:
+                menuOperacionesExtendidas();
+                break;
+        case 3:
+                repetir = false;
+                break;
+        }
+    } while (repetir);
+}
+void menuOperacionesBasicas()
+{
+    int opciones;
+    bool repetir = true;
+    do
+    {
+        system("cls");
+        cout << "\n\n\t\t\tMenu Operaciones Basicas" << endl;
+        cout << "\t\t\t-----------------" << endl;
+        cout << "\t1. Sumar dos numeros" << endl;
+        cout << "\t2. Restar dos numeros" << endl;
+        cout << "\t3. Multiplicar dos numeros" << endl;
+        cout << "\t4. Dividir dos numeros" << endl;
+        cout << "\t5. SALIR" << endl;
+        cout << "\n\tIngrese una opcion: ";
+        cin >> opciones;
+        switch (opciones)
+        {
+        case 1:
+                sumar();
+                break;
+        case 2:
+                restar();
+                break;
+        case 3:
+                multiplicar();
+                break;
+        case 4:
+                dividir();
+                break;
+        case 5: repetir = false;
+                break;
+        }
+    } while (repetir);
+}
 void menuOperacionesExtendidas()
 {
     int opciones;
@@ -65,69 +129,7 @@ void menuOperacionesExtendidas()
         }
     } while (repetir);
 }
-void menuOperacionesBasicas()
-{
-    int opciones;
-    bool repetir = true;
-    do
-    {
-        system("cls");
-        cout << "\n\n\t\t\tMenu Operaciones Basicas" << endl;
-        cout << "\t\t\t-----------------" << endl;
-        cout << "\t1. Sumar dos n�meros" << endl;
-        cout << "\t2. Restar dos n�meros" << endl;
-        cout << "\t3. Multiplicar dos n�meros" << endl;
-        cout << "\t4. Dividir dos n�meros" << endl;
-        cout << "\t5. SALIR" << endl;
-        cout << "\n\tIngrese una opci�n: ";
-        cin >> opciones;
-        switch (opciones)
-        {
-        case 1:
-                sumar();
-                break;
-        case 2:
-                restar();
-                break;
-        case 3:
-                multiplicar();
-                break;
-        case 4:
-                dividir();
-                break;
-        case 5: repetir = false;
-                break;
-        }
-    } while (repetir);
-}
-void menuPrincipal()
-{
-    int opciones;
-    bool repetir = true;
-    do
-    {
-        system("cls");
-        cout << "\n\n\t\t\tMENU CALCULADORA" << endl;
-        cout << "\t\t\t-----------------" << endl;
-        cout << "\t1. Operaciones Basicas" << endl;
-        cout << "\t2. Operaciones Extendidas" << endl;
-        cout << "\t3. SALIR" << endl;
-        cout << "\n\tIngrese una opci�n: ";
-        cin >> opciones;
-        switch (opciones)
-        {
-        case 1:
-                menuOperacionesBasicas();
-                break;
-        case 2:
-                menuOperacionesExtendidas();
-                break;
-        case 3:
-                repetir = false;
-                break;
-        }
-    } while (repetir);
-}
+
 void factorial()
 {
     system("cls");
@@ -135,7 +137,7 @@ void factorial()
     float resultadoFactorial;
     cout << "\n\tCalculo del Factorial" << endl;
     cout << "\t\t\t-----------------" << endl;
-    cout << "\n\tIngrese N�mero: ";
+    cout << "\n\tIngrese Numero: ";
     cin >> numeroIngresado;
     resultadoFactorial = 1;
     for (i=1; i <= numeroIngresado; i++)
