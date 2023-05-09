@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1680229609 source:c:\users\kenph\dropbox\mi pc (laptop-kh5s24mu)\documents\c++\tareasp19959-22-6326\torre de hanoi\crud_archivos_secuenciales\main.cpp
+	<iostream>
+	"persona.h"
+
+1680276986 c:\users\kenph\dropbox\mi pc (laptop-kh5s24mu)\documents\c++\tareasp19959-22-6326\torre de hanoi\crud_archivos_secuenciales\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1680229609 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\laboratorios\trabajos en grupo\crud_archivos_secuenciales\main.cpp
+	<iostream>
+	"persona.h"
+
+1680276986 c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\laboratorios\trabajos en grupo\crud_archivos_secuenciales\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1680277195 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\laboratorios\trabajos en grupo\crud_archivos_secuenciales\src\persona.cpp
+	"persona.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+

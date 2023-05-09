@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1681307924 source:c:\jemr\proyecto\prototipo\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<cstdlib>
+
+1681796115 source:c:\users\lima\desktop\prototipo\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1681797337 source:c:\users\kesdy\desktop\prototipoplanilla-main\prototipo\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1683299637 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\laboratorios\trabajos en grupo\prototipoplanilla-main\prototipo\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
