@@ -1,6 +1,9 @@
 //Kesdy Aaron Melgar Orellana
 //9959-22-9304
 
+#ifndef BITACORA_H
+#define BITACORA_H
+
 #include "usuario.h"
 #include "bitacora.h"
 #include <iostream>
@@ -19,9 +22,15 @@
 
 using namespace std;
 
-main()
+class bitacora
 {
-	usuario examenFinal;
-	examenFinal.menuAdministrador();
-	return 0;
-}
+    public:
+        void ingreso(string nombreAd, string code);
+        void desplegarBitacora(string nombreAd, string code);
+
+    protected:
+
+    private:
+};
+
+#endif // BITACORA_H

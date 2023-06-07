@@ -1,5 +1,11 @@
-#include "usuario.h"
+//Kesdy Aaron Melgar Orellana
+//9959-22-9304
 
+#include "usuario.h"
+#include "bitacora.h"
+
+#include "usuario.h"
+#include "bitacora.h"
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
@@ -15,6 +21,9 @@
 #define INTENTOS 3
 
 using namespace std;
+
+string codigo;
+bitacora bit;
 
 void usuario::menuAdministrador()
 {
@@ -40,6 +49,9 @@ void usuario::menuAdministrador()
 		break;
 	case 2:
 	    system("cls");
+	    bitacora bit;
+        codigo = "5000";
+        bit.ingreso(nameAdministrador,codigo);
         cout << "==========================================================" << endl;
         cout << "||             Muchas gracias, vuelva pronto            ||" << endl;
         cout << "==========================================================" << endl;
@@ -125,10 +137,16 @@ void usuario::insertarAdministrador()
         cout << "==========================================================" << endl;
         cout << "||       Haz fallado 3 veces, intentalo mas tarde       ||" << endl;
         cout << "==========================================================" << endl;
+        codigo = "1000";
+        bitacora bit;
+        bit.ingreso(nameAdministrador,codigo);
     }
 
     else
     {
+    codigo = "1001";
+    bitacora bit;
+    bit.ingreso(nameAdministrador,codigo);
     int Opciones;
 	char x;
 	do
@@ -172,6 +190,67 @@ void usuario::insertarAdministrador()
     case 1:
         menuJugador();
 		break;
+    case 2:
+    system("cls");
+    do
+    {
+        system("cls");
+    cout << "" << endl;
+    cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+    cout << "" << endl;
+    cout << "==========================================================" << endl;
+    cout << "||                  MENU DE PROCESOS                    ||" << endl;
+    cout << "==========================================================" << endl;
+    cout << "          *===============================*"                << endl;
+    cout << "          |    Porfavor, elije una opcion |"                << endl;
+    cout << "          |                               |"                << endl;
+    cout << "          | 1. Jugadores                  |"                << endl;
+    cout << "          | 2. Bitacora                   |"                << endl;
+    cout << "          | 3. Deportes                   |"                << endl;
+    cout << "          | 4. Salir al menu inicial      |"                << endl;
+    cout << "          | 5. Salir del sistema          |"                << endl;
+    cout << "          |                               |"                << endl;
+    cout << "          *===============================*"                << endl;
+    cout << ""                                                           << endl;
+    cout << "               Ingresa una Opcion: ";
+    cin >> Opciones;
+
+        switch(Opciones)
+        {
+        case 1:
+            desplegarJugador();
+        break;
+        case 2:
+            bit.desplegarBitacora(nameAdministrador,"7000");
+            break;
+        case 3:
+            menuDeportes();
+            bit.ingreso(nameAdministrador,"4000");
+            break;
+        case 4:
+            system("cls");
+            cout << "==========================================================" << endl;
+            cout << "||                   REDIRECCIONANDO...                  ||"<< endl;
+            cout << "==========================================================" << endl;
+                return;
+        case 5:
+        system("cls");
+	    bitacora bit;
+        codigo = "5000";
+        bit.ingreso(nameAdministrador,codigo);
+        cout << "" << endl;
+        cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+        cout << "" << endl;
+        cout << "==========================================================" << endl;
+        cout << "||             Muchas gracias, vuelva pronto            ||" << endl;
+        cout << "==========================================================" << endl;
+        exit(0);
+	default:
+		cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+	}
+	getch();
+    }while(Opciones!= 4);
+    break;
     case 3:
     system("cls");
     do
@@ -186,12 +265,10 @@ void usuario::insertarAdministrador()
     cout << "          *===============================*"                << endl;
     cout << "          |    Porfavor, elije una opcion |"                << endl;
     cout << "          |                               |"                << endl;
-    cout << "          | 1. Jugadores                  |"                << endl;
-    cout << "          | 2. Bitacora                   |"                << endl;
-    cout << "          | 3. Aplicaciones               |"                << endl;
-    cout << "          | 4. Deportes                   |"                << endl;
-    cout << "          | 5. Salir al menu inicial      |"                << endl;
-    cout << "          | 6. Salir del sistema          |"                << endl;
+    cout << "          | 1. Bitacora                   |"                << endl;
+    cout << "          | 2. Aplicaciones               |"                << endl;
+    cout << "          | 3. Salir al menu inicial      |"                << endl;
+    cout << "          | 4. Salir del sistema          |"                << endl;
     cout << "          |                               |"                << endl;
     cout << "          *===============================*"                << endl;
     cout << ""                                                           << endl;
@@ -201,23 +278,46 @@ void usuario::insertarAdministrador()
         switch(Opciones)
         {
         case 1:
-            desplegarJugador();
-        break;
+            bit.desplegarBitacora(nameAdministrador,"7000");
+            break;
         case 2:
-            //bit.desplegarBitacora(nameAdministrador,"7500");
+            system("cls");
+            cout << "" << endl;
+            cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+            cout << "" << endl;
+            cout << "=========================================================="<< endl;
+            cout << "||                CODIGO DE INGRESOS                    ||"<< endl;
+            cout << "=========================================================="<< endl;
+            cout << "                   1000		INGRESOFALLIDO             "<< endl;
+            cout << "                   1001		INGRESO                    "<< endl;
+            cout << "                   2000		MENUJUGADORES              "<< endl;
+            cout << "                   2001		AGRJUGADORES               "<< endl;
+            cout << "                   2002		REPJUGADORES               "<< endl;
+            cout << "                   2003		MODJUGADORES               "<< endl;
+            cout << "                   2004		BUSJUGADORES               "<< endl;
+            cout << "                   2005		BORJUGADORES               "<< endl;
+            cout << "                   3000		REPAPLICACIONES            "<< endl;
+            cout << "                   4000         MENUDEPORTES              "<< endl;
+            cout << "                   4001         REPFUTBOL                 "<< endl;
+            cout << "                   4002         REPBASQUETBOL             "<< endl;
+            cout << "                   4003         REPVOLLEYBALL             "<< endl;
+            cout << "                   4004         REPHOCKEY                 "<< endl;
+            cout << "                   5000		SALIDA                     "<< endl;
+            cout << "                   7000		BITACORA                   "<< endl;
+            cout << "=========================================================="<< endl;
+            bit.ingreso(nameAdministrador,"3000");
+            system("pause");
             break;
         case 3:
-            break;
-        case 4:
-            menuDeportes();
-            break;
-        case 5:
             system("cls");
+            bitacora bit;
+            codigo = "5000";
+            bit.ingreso(nameAdministrador,codigo);
             cout << "==========================================================" << endl;
             cout << "||                   REDIRECCIONANDO...                  ||"<< endl;
             cout << "==========================================================" << endl;
                 return;
-        case 6:
+        case 4:
         system("cls");
         cout << "" << endl;
         cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
@@ -234,17 +334,24 @@ void usuario::insertarAdministrador()
     break;
 	case 4:
 	    system("cls");
+	    bitacora bit;
+        codigo = "5000";
+        bit.ingreso(nameAdministrador,codigo);
         cout << "==========================================================" << endl;
         cout << "||                   REDIRECCIONANDO...                  ||"<< endl;
         cout << "==========================================================" << endl;
 		return;
     case 5:
         system("cls");
+        codigo = "5000";
+        bit.ingreso(nameAdministrador,codigo);
+        cout << "" << endl;
+        cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+        cout << "" << endl;
         cout << "==========================================================" << endl;
         cout << "||             Muchas gracias, vuelva pronto            ||" << endl;
         cout << "==========================================================" << endl;
-	default:
-		cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+        exit(0);
 	}
 	getch();
     }while(Opciones!= 3);
@@ -257,6 +364,9 @@ void usuario::menuJugador()
 	do
     {
 	system("cls");
+	bitacora bit;
+	codigo = "2000";
+	bit.ingreso(nameAdministrador,codigo);
     cout << "" << endl;
     cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
     cout << "" << endl;
@@ -308,6 +418,9 @@ void usuario::menuJugador()
 		break;
     case 6:
         system("cls");
+	    bitacora bit;
+        codigo = "5000";
+        bit.ingreso(nameAdministrador,codigo);
         cout << "" << endl;
         cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
         cout << "" << endl;
@@ -317,6 +430,8 @@ void usuario::menuJugador()
                 break;
 	case 7:
 	    system("cls");
+        codigo = "5000";
+        bit.ingreso(nameAdministrador,codigo);
         cout << "" << endl;
         cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
         cout << "" << endl;
@@ -359,6 +474,9 @@ void usuario::insertarJugador()
         deportes="Futbol";
         file.open("Futbol.txt", ios::app | ios::out);
         file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< deportes << "\n";
+        codigo = "4001";
+        bit.ingreso(nameAdministrador,codigo);
+        file.close();
         file.close();
     }
 	if (deportes=="B")
@@ -366,6 +484,9 @@ void usuario::insertarJugador()
         deportes="Basquetbol";
         file.open("Basquetbol.txt", ios::app | ios::out);
         file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< deportes << "\n";
+        codigo = "4002";
+        bit.ingreso(nameAdministrador,codigo);
+        file.close();
         file.close();
     }
     if (deportes=="V")
@@ -373,6 +494,9 @@ void usuario::insertarJugador()
         deportes="Volleyball";
         file.open("Volleyball.txt", ios::app | ios::out);
         file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< deportes << "\n";
+        codigo = "4003";
+        bit.ingreso(nameAdministrador,codigo);
+        file.close();
         file.close();
     }
     if (deportes=="H")
@@ -380,6 +504,9 @@ void usuario::insertarJugador()
         deportes="Hockey";
         file.open("Hockey.txt", ios::app | ios::out);
         file << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::left << std::setw(15)<< telefono << std::setw(15)<< deportes << "\n";
+        bitacora bit;
+        codigo = "4004";
+        bit.ingreso(nameAdministrador,codigo);
         file.close();
     }
     file.open("Usuarios.txt", ios::app | ios::out);
@@ -395,12 +522,12 @@ void usuario::desplegarJugador()
     cout << "" << endl;
     cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
     cout << "" << endl;
-    cout << "===============================================================================================================================================================" << endl;
-    cout << "||                                                             TABLA DE DETALLES DE JUGADOR                                                               ||" << endl;
-    cout << "===============================================================================================================================================================" << endl;
-    cout << "===============================================================================================================================================================" << endl;
-    cout << "ID             NOMBRE       PASSWORD         TELEFONO         PUESTO      SALARIO     HORAS EXTRAS       IGSS           IRTRA        SALARIO NETO    ADELANTOS " << endl;
-    cout << "===============================================================================================================================================================" << endl;
+    cout << "=======================================================================" << endl;
+    cout << "||                  TABLA DE DETALLES DE JUGADOR                     ||" << endl;
+    cout << "=======================================================================" << endl;
+    cout << "=======================================================================" << endl;
+    cout << "ID             NOMBRE       PASSWORD      TELEFONO           DEPORTE   " << endl;
+    cout << "=======================================================================" << endl;
 	file.open("Usuarios.txt",ios::in);
 	if(!file)
 	{
@@ -574,6 +701,9 @@ void usuario::menuDeportes()
     do
     {
     system("cls");
+	bitacora bit;
+	codigo = "4000";
+	bit.ingreso(nameAdministrador,codigo);
     cout << "" << endl;
     cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
     cout << ""<< endl;
@@ -610,6 +740,9 @@ void usuario::menuDeportes()
             break;
         case 5:
             system("cls");
+            bitacora bit;
+            codigo = "5000";
+            bit.ingreso(nameAdministrador,codigo);
             cout << "" << endl;
             cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
             cout << ""<< endl;

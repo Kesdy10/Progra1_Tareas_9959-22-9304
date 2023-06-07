@@ -55,8 +55,9 @@
 	<vector>
 	<chrono>
 
-1686153074 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\main.cpp
+1686159735 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\main.cpp
 	"usuario.h"
+	"bitacora.h"
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -67,12 +68,50 @@
 	<vector>
 	<chrono>
 
-1686158042 c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\include\usuario.h
+1686159735 c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\include\usuario.h
 	"usuario.h"
+	"bitacora.h"
 	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
 
-1686158536 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\src\usuario.cpp
+1686160875 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\src\usuario.cpp
 	"usuario.h"
+	"bitacora.h"
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1686159735 c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\include\bitacora.h
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1686159735 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\src\bitacora.cpp
+	"usuario.h"
+	"bitacora.h"
 	<iostream>
 	<fstream>
 	<stdlib.h>
