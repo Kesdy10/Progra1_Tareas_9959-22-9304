@@ -14,8 +14,8 @@ class usuario
 {
 	private:
 		string nameAdministrador,passwordAdministrador;
-		string ID,name,password,edad,deporte,posicion,equipo;
-		int telefono;
+		string ID,name,password, deportes;
+		int telefono, edad;
 	public:
 		void menuAdministrador();
 		void insertarAdministrador();
@@ -25,8 +25,12 @@ class usuario
 		void modificarJugador();
 		void buscarJugador();
 		void borrarJugador();
-		void menuProcesos();
-		void menuInformes();
+		void desplegarAplicaciones();
+		void menuDeportes();
+		void desplegarFutbol();
+		void desplegarVolleyball();
+        void desplegarHockey();
+        void desplegarBasquetbol();
 };
 
 #endif // USUARIO_H
