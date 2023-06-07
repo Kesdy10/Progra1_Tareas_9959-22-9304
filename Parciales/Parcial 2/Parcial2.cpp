@@ -81,7 +81,7 @@ void usuario::insertar()
     vector<string> usuarios;
     vector<string> claves;
 
-    IDs.push_back("10");
+    IDs.push_back("9959-22-9304");
 
     usuarios.push_back("Kesdy");
 
