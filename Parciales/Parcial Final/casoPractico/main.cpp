@@ -1,3 +1,6 @@
+//Kesdy Aaron Melgar Orellana
+//9959-22-9304
+
 #include "usuario.h"
 #include <iostream>
 #include <fstream>

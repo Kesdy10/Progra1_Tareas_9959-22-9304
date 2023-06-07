@@ -141,8 +141,7 @@ void usuario::insertarAdministrador()
     std::cout << "||       BB   BB   II    EE       NN   NNNN     VV VV     EE        NN  NNNN    II    DD   DD  OO   OO     ||" << std::endl;
     std::cout << "||       BBBBBB   IIII   EEEEEEE  NN    NNN       V       EEEEEEE   NN   NNN   IIII   DDDDDD   OOOOOOO     ||" << std::endl;
     std::cout << "**=========================================================================================================**" << std::endl;
-    std::cout << "||                            Bienvenido, " << nameAdministrador << " al programa de nomina                                      ||" << std::endl;
-    std::cout << "||       Esperamos que esta herramienta sea de utilidad para calcular los salarios de los empleados        ||" << std::endl;
+    std::cout << "||                              KESDY AARON MELGAR ORELLANA - 9959-22-9304                                 ||" << std::endl;
     std::cout << "**=========================================================================================================**" << std::endl;
     std::cout << std::endl;
     system("pause");

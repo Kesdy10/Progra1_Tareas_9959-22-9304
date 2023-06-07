@@ -14,12 +14,20 @@ class usuario
 {
 	private:
 		string nameAdministrador,passwordAdministrador;
+		//string ID,name,password;
+		//int telefono
 	public:
 		void menuAdministrador();
 		void insertarAdministrador();
 		void menuTrabajador();
-		void menuProcesos();
-		void menuInformes();
+		void insertarTrabajador();
+		void desplegarTrabajador();
+		void modificarTrabajador();
+		void buscarTrabajador();
+		void borrarTrabajador();
+		//void menuTrabajador();
+		//void menuProcesos();
+		//void menuInformes();
 };
 
 #endif // USUARIO_H

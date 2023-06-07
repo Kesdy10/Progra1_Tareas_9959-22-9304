@@ -55,3 +55,31 @@
 	<vector>
 	<chrono>
 
+1686153074 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\main.cpp
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1686153541 c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\include\usuario.h
+	"usuario.h"
+	<iostream>
+
+1686152045 source:c:\users\kesdy\documents\programacion1\progra1_tareas_9959-22-9304\parciales\parcial final\casopractico\src\usuario.cpp
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
