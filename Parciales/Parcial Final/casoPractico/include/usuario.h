@@ -14,20 +14,19 @@ class usuario
 {
 	private:
 		string nameAdministrador,passwordAdministrador;
-		//string ID,name,password;
-		//int telefono
+		string ID,name,password,edad,deporte,posicion,equipo;
+		int telefono;
 	public:
 		void menuAdministrador();
 		void insertarAdministrador();
-		void menuTrabajador();
-		void insertarTrabajador();
-		void desplegarTrabajador();
-		void modificarTrabajador();
-		void buscarTrabajador();
-		void borrarTrabajador();
-		//void menuTrabajador();
-		//void menuProcesos();
-		//void menuInformes();
+		void menuJugador();
+		void insertarJugador();
+		void desplegarJugador();
+		void modificarJugador();
+		void buscarJugador();
+		void borrarJugador();
+		void menuProcesos();
+		void menuInformes();
 };
 
 #endif // USUARIO_H

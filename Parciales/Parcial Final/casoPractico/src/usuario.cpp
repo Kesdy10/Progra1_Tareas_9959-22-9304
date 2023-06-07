@@ -170,7 +170,7 @@ void usuario::insertarAdministrador()
     switch(Opciones)
     {
     case 1:
-        //menuTrabajador();
+        menuJugador();
 		break;
     case 2:
         //menuProcesos();
@@ -195,3 +195,303 @@ void usuario::insertarAdministrador()
     }while(Opciones!= 5);
 }
 }
+void usuario::menuJugador()
+{
+    int Opciones;
+	char x;
+	do
+    {
+	system("cls");
+    cout << "" << endl;
+    cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+    cout << "" << endl;
+    cout << "==========================================================" << endl;
+    cout << "||                      NOMINA UMG                      ||" << endl;
+    cout << "==========================================================" << endl;
+    cout << "          *===============================*"                << endl;
+    cout << "          |   Porfavor, elije una opcion  |"                << endl;
+    cout << "          |                               |"                << endl;
+    cout << "          | 1. Ingresar Jugador           |"                << endl;
+    cout << "          | 2. Desplegar Jugador          |"                << endl;
+    cout << "          | 3. Modificar Jugador          |"                << endl;
+    cout << "          | 4. Buscar Jugador             |"                << endl;
+    cout << "          | 5. Borrar Jugador             |"                << endl;
+    cout << "          | 6. Regresar al inicio         |"                << endl;
+    cout << "          | 7. Salir del sistema          |"                << endl;
+    cout << "          |                               |"                << endl;
+    cout << "          *===============================*"                << endl;
+    cout << ""                                                           << endl;
+    cout << "               Ingresa una Opcion: ";
+    cin >> Opciones;
+    switch(Opciones)
+    {
+    case 1:
+    	do
+    	{
+        insertarJugador();
+        cout << "==========================================================" << endl;
+        cout << "||              DESEA INGRESAR OTRO JUGADOR             ||" << endl;
+        cout << "==========================================================" << endl;
+        cout << "==========================================================" << endl;
+        cout << "||           Pulsa Y para si ||| Pulsa N para No        ||" << endl;
+        cout << "==========================================================" << endl;
+        cout << "                 SELECCIONA UNA RESPUESTA: ";
+        cin >> x;
+		}while(x == 'y'||x == 'Y');
+		break;
+	case 2:
+		desplegarJugador();
+		break;
+	case 3:
+		modificarJugador();
+		break;
+	case 4:
+		buscarJugador();
+		break;
+	case 5:
+		borrarJugador();
+		break;
+    case 6:
+        system("cls");
+        cout << "" << endl;
+        cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+        cout << "" << endl;
+        cout << "==========================================================" << endl;
+        cout << "||                   REDIRECCIONANDO...                  ||"<< endl;
+        cout << "==========================================================" << endl;
+                break;
+	case 7:
+	    system("cls");
+        cout << "" << endl;
+        cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+        cout << "" << endl;
+        cout << "==========================================================" << endl;
+        cout << "||             Muchas gracias, vuelva pronto            ||" << endl;
+        cout << "==========================================================" << endl;
+        exit(0);
+	default:
+		cout << "\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
+	}
+	getch();
+    }while(Opciones!= 6);
+}
+void usuario::insertarJugador()
+{
+	system("cls");
+	fstream file;
+    cout << "" << endl;
+    cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+    cout << "" << endl;
+    cout << "==========================================================" << endl;
+    cout << "||                  AGREGAR UN JUGADOR                  ||" << endl;
+    cout << "==========================================================" << endl;
+	cout << "\t\t  Ingresa ID del Jugador : ";
+	cin >> ID;
+	cout << "\t\t  Ingresa Nombre del Jugador : ";
+	cin >> name;
+	cout << "\t\t  Ingresa Contrasena Jugador : ";
+	cin >> password;
+	cout << "\t\t  Ingresa Edad de Jugador : ";
+	cin >> edad;
+	cout << "\t\t  Ingresa Numero de telefono del Jugador : ";
+	cin >> telefono;
+	cout << "\t\t  Ingresa Deporte del Jugador : ";
+	cin >> deporte;
+	cout << "\t\t  Ingresa Posicion del Jugador : ";
+	cin >> posicion;
+	cout << "\t\t  Ingresa equipo del Jugador : ";
+	cin >> equipo;
+    system("cls");
+    cout << "==========================================================" << endl;
+    cout << "||                   JUGADOR AGREGADO                   ||" << endl;
+    cout << "==========================================================" << endl;
+}
+void usuario::desplegarJugador()
+{
+	system("cls");
+	fstream file;
+	string ver;
+	int total = 0;
+    cout << "" << endl;
+    cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+    cout << "" << endl;
+    cout << "===============================================================================================================================================================" << endl;
+    cout << "||                                                               TABLA DE DETALLES DE JUGADOR                                                                ||" << endl;
+    cout << "===============================================================================================================================================================" << endl;
+    cout << "===============================================================================================================================================================" << endl;
+    cout << "ID             NOMBRE       PASSWORD         TELEFONO         EDAD      DEPORTE     POSICION       EQUIPO " << endl;
+    cout << "===============================================================================================================================================================" << endl;
+	file.open("Usuarios.txt",ios::in);
+	if(!file)
+	{
+		cout << "\n\t\t\tNo hay informacion...";
+		file.close();
+	}
+	else
+	{
+		while(!file.eof())
+		{
+			total++;
+			getline(file,ver);
+            cout << ver << endl;
+		}
+		if(total == 0)
+		{
+			cout<<"\n\t\t\tNo hay informacion...";
+		}
+	}
+	file.close();
+}
+void usuario::modificarJugador()
+{
+	system("cls");
+	fstream file,file1;
+	string user_ID;
+	int found = 0;
+        cout << "==========================================================" << endl;
+        cout << "||                 MODIFICAR JUGADOR                    ||" << endl;
+        cout << "==========================================================" << endl;
+	file.open("Usuarios.txt",ios::in);
+	if(!file)
+	{
+		cout << "\n\t\t\tNo hay informacion..,";
+		file.close();
+	}
+	else
+	{   cout << "" << endl;
+	    cout << "\n\tUsuario: " << nameAdministrador << endl << endl;
+		cout << "\n Ingrese ID del usuario que quiere modificar: ";
+		cin >> user_ID;
+		file1.open("Record.txt",ios::app | ios::out);
+        file >> ID >> name >> password >> edad >> telefono >> deporte >> posicion >> equipo ;
+		while(!file.eof())
+		{
+			if(user_ID!=ID)
+			{
+			 file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::setw(15)<< edad << std::left << std::setw(15)<< telefono << std::left << std::setw(15)<< deporte << std::left << std::setw(15)  << posicion << std::left << std::setw(15)<< equipo << "\n";
+			}
+			else
+			{
+				cout << "\t\t\tIngrese ID Persona: ";
+				cin >> ID;
+				cout << "\t\t\tIngrese Nombre Persona: ";
+				cin >> name;
+				cout << "\t\t\tIngrese Contrasena Persona: ";
+				cin >> password;
+				cout << "\t\t\tIngrese Telefono Persona: ";
+				cin >> edad;
+				cout << "\t\t\tIngrese Telefono Persona: ";
+				cin >> telefono;
+				cout << "\t\t\tIngrese Telefono Persona: ";
+				cin >> deporte;
+				cout << "\t\t\tIngrese Telefono Persona: ";
+				cin >> posicion;
+				cout << "\t\t\tIngrese Telefono Persona: ";
+				cin >> equipo;
+                file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::setw(15)<< edad << std::left << std::setw(15)<< telefono << std::left << std::setw(15)<< deporte << std::left << std::setw(15)  << posicion << std::left << std::setw(15)<< equipo << "\n";
+				found++;
+			}
+                file >> ID >> name >> password >> edad >> telefono >> deporte >> posicion >> equipo;
+
+		}
+		file1.close();
+		file.close();
+		remove("Usuarios.txt");
+		rename("Record.txt","Usuarios.txt");
+	}
+}
+void usuario::buscarJugador()
+{
+	system("cls");
+	fstream file;
+	int found = 0;
+	file.open("Usuarios.txt",ios::in);
+	if(!file)
+	{
+        cout << "==========================================================" << endl;
+        cout << "||               DATOS DE JUGADOR BUSCADO              ||" << endl;
+        cout << "==========================================================" << endl;
+		cout << "\n\t\t\tNo hay informacion...";
+	}
+	else
+	{
+		string user_ID;
+        cout << "" << endl;
+        cout << "\t       Nombre Administrador: " << nameAdministrador << endl;
+        cout << "" << endl;
+        cout << "==========================================================" << endl;
+        cout << "||              DATOS DE JUGADOR BUSCADO                ||" << endl;
+        cout << "==========================================================" << endl;
+		cout << "\nIngrese ID de la Persona que quiere buscar: ";
+		cin >> user_ID;
+        file >> ID >> name >> password >> edad >> telefono >> deporte >> posicion >> equipo;
+		while(!file.eof())
+		{
+			if(user_ID == ID)
+			{
+				cout << "                 *============================* "<< endl;
+                cout << "                                              "<< endl;
+                cout << "                   ID Jugador: "<< ID << endl;
+                cout << "                   Nombre Jugador : "<< name << endl;
+                cout << "                   Contrasena Jugador : "<< password << endl;
+                cout << "                   Posicion Jugador : "<< posicion << endl;
+                cout << "                                              "<< endl;
+                cout << "                 *============================* "<< endl;
+				found++;
+			}
+        file >> ID >> name >> password >> edad >> telefono >> deporte >> posicion >> equipo;
+		}
+		if(found == 0)
+		{
+			cout<<"\n\t\t\t Jugador no encontrado...";
+		}
+		file.close();
+	}
+}
+void usuario::borrarJugador()
+{
+	system("cls");
+	fstream file,file1;
+	string user_ID;
+	int found = 0;
+		cout << ""<< endl;
+        cout << "==========================================================" << endl;
+        cout << "||            DETALLES DE JUGADOR A BORRAR              ||" << endl;
+        cout << "==========================================================" << endl;
+	file.open("Usuarios.txt",ios::in);
+	if(!file)
+	{
+		cout << "\n\t\t\tNo hay informacion...";
+		file.close();
+	}
+	else
+	{   cout << "" << endl;
+	    cout << "\n\tUsuario: " << nameAdministrador << endl << endl;
+		cout << "\n Ingrese el ID del Usuario que quiere borrar: ";
+		cin >> user_ID;
+		file1.open("Record.txt",ios::app | ios::out);
+        file >> ID >> name >> password >> edad >> telefono >> deporte >> posicion >> equipo;
+		while(!file.eof())
+		{
+			if(user_ID!=ID)
+			{
+                 file1 << std::left << std::setw(15) << ID << std::left << std::setw(15) << name << std::left << std::setw(15) << password << std::left << std::setw(15)<< edad << std::left << std::setw(15)<< telefono << std::left << std::setw(15)<< deporte << std::left << std::setw(15)  << posicion << std::left << std::setw(15)<< equipo << "\n";
+			}
+			else
+			{
+				found++;
+				cout << "\n\t\t\tBorrado de informacion exitoso";
+			}
+        file >> ID >> name >> password >> edad >> telefono >> deporte >> posicion >> equipo;
+		}
+		if(found == 0)
+		{
+			cout<<"\n\t\t\t ID Persona no encontrado...";
+		}
+		file1.close();
+		file.close();
+		remove("Usuarios.txt");
+		rename("Record.txt","Usuarios.txt");
+	}
+}
+
